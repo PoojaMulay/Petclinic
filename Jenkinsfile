@@ -32,5 +32,7 @@ pipeline {
         stage ("build"){
             steps{
                 sh "build docker -t poojam09/Petclinic"
+            }
+        }
     }
 }
