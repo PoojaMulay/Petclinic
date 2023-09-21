@@ -5,7 +5,7 @@ pipeline {
         maven 'maven3'
     }
 
-    stages {
+    stages{
         stage('gitcheckout') {
             steps {
                 git branch: 'main', credentialsId: '8504db3f-0ed7-45f6-ab9e-9de0c2bc0a7e', url: 'https://github.com/PoojaMulay/Petclinic.git'
