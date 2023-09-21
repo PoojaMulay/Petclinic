@@ -30,7 +30,7 @@ pipeline {
         } */
         stage ("build"){
             steps{
-                withDockerRegistry(credentialsId: 'pooja', toolName: 'docker') {
+                withDockerRegistry(credentialsId: 'pooja', url: 'https://index.docker.io/v1/') {
                 sh "docker build -t petclinic -f Dockerfile . "
                 
                 
