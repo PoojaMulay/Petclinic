@@ -31,7 +31,7 @@ pipeline {
         }
         stage ("build"){
             steps{
-                sh "docker build -t poojam09/Petclinic"
+                sh "docker build -t poojam09/Petclinic ."
             }
         }
     }
