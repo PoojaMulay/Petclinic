@@ -33,7 +33,7 @@ pipeline {
             steps{
                 withDockerRegistry(credentialsId: 'pooja', toolName: 'docker'){
                 sh "docker build -t poojam09/petclinic . "
-                sh "docker tag poojam09/petclinic:1
+                sh "docker tag poojam09/petclinic:1"
                 
                 }
             }
