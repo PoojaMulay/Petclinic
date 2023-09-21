@@ -5,6 +5,13 @@ pipeline {
         jdk 'jdk11'
         maven 'maven3'
     }
+ feature-1
+
+    stages {
+        stage('Git Checkout') {
+            steps {
+                git branch: 'feature-1', url: 'https://github.com/jaiswaladi246/Petclinic.git'
+
     
     environment {
         SCANNER_HOME=tool 'sonar-scanner'
@@ -15,6 +22,7 @@ pipeline {
         stage("Git Checkout"){
             steps{
                 git branch: 'main', changelog: false, poll: false, url: 'https://github.com/jaiswaladi246/Petclinic.git'
+ main
             }
         }
         
