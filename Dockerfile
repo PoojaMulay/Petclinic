@@ -1,4 +1,4 @@
-FROM openjdk:8
+FROM openjdk:11
 EXPOSE 8082
-COPY target/petclinic.war /var/lib/jenkins/workspace/jenkins-server/target
+COPY target/petclinic.war /
 ENTRYPOINT ["java", "-jar", "/petclinic.war"]
