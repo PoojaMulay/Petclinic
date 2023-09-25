@@ -17,17 +17,17 @@ pipeline {
                 sh 'mvn sonar:sonar -Dsonar.url=http://100.25.24.16:9000/ -Dsonar.login=squ_b34a7d97398a45ea9017825b74b768c4916f3671 -Dsonar.projectName=Petclinic -Dsonar.java.binaries=. -Dsonar.projectKey=Petclinic'
             }
         }
-     /*stage("Compile"){
+   /*  stage("Compile"){
             steps{
                 sh "mvn clean compile"
             }
-        }
+        } */
         
          stage("Test Cases"){
             steps{
                 sh "mvn test"
             }
-        }*/
+        }
         stage ("build"){
             steps{
                 withDockerRegistry(credentialsId: 'pooja', url: 'https://index.docker.io/v1/') {
