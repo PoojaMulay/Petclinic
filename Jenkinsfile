@@ -11,7 +11,7 @@ pipeline {
                 git branch: 'main', credentialsId: '8504db3f-0ed7-45f6-ab9e-9de0c2bc0a7e', url: 'https://github.com/PoojaMulay/Petclinic.git'
             }
         }
-        stage('analysis') {
+        stage('sonar analysis') {
             steps {
                 sh 'mvn clean package'
                 sh 'mvn sonar:sonar -Dsonar.url=http://34.239.249.154/:9000/ -Dsonar.login=squ_b34a7d97398a45ea9017825b74b768c4916f3671 -Dsonar.projectName=Petclinic -Dsonar.java.binaries=. -Dsonar.projectKey=Petclinic'
